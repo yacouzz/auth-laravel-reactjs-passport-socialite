@@ -33,15 +33,15 @@ class TweetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+     public function create(Request $request, Tweet $post)
     {
         //
-        Tweet::create([
+       $data= Tweet::create([
             'content' => $request->content,
             'user_id'=>Auth::user()->id,
         ]);
 
-        return response()->json(['success'=>'its working'],200);
+        return response()->json($post->with('user')->find($data->id));
     }
 
     /**
