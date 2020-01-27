@@ -1,3 +1,3 @@
-# twitter-clone-reactjs-laravel
+# reactjs-laravel-twitterlike-app
 
 By Rabah Hammoutene
