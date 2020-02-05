@@ -1,5 +1,4 @@
 import React from 'react';
-//import {setCurrentUser} from '../redux/user/user.utils'
 import { connect } from 'react-redux';
 import { setCurrentUser } from '../redux/user/user.actions';
 
@@ -34,28 +33,8 @@ class Login extends React.Component{
           const {setCurrentUser}=this.props;
 
           window.location.assign(`auth/google`); //for the web route
-          /*axios.get(`auth/google`,{"headers" : headers}).then(response =>
-            console.log(response)
-            );*/
-           /* fetch('auth/google', {
-                method: "GET",
-                mode: "cors",
-                cache: "no-cache",
-
-               // body: JSON.stringify(data)
-              }).then(response =>
-                fetch(response.url, {
-                    method: "OPTIONS",
-                    mode: "cors",
-                    cache: "no-cache",
-
-                   // body: JSON.stringify(data)
-                  }).then(res => console.log(res))
-
-                );*/
-            /*axios.get('auth/google').then(
-                    res => console.log(res)
-                );*/
+          
+          
     }
 
     handleChange(e) {
@@ -81,13 +60,7 @@ class Login extends React.Component{
         })
       e.preventDefault();
 
-     /* const {email, password, remember}= this.state;
-
-      console.log(email)
-      console.log(password)
-      console.log(remember)
-      console.log(this.state)
-*/
+  
       var headers = {
         'Content-Type': 'application/json',
         'Accept' : 'application/json',
